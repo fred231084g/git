@@ -108,6 +108,7 @@
  */
 
 struct index_state;
+struct object_id;
 
 /**
  * An attribute is an opaque object that is identified by its name. Pass the
