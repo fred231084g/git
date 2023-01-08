@@ -305,7 +305,7 @@ test_wt_add_excl () {
 	local opts="$*" &&
 	test_expect_success "'worktree add' with '$opts' has mutually exclusive options" '
 		test_must_fail git worktree add $opts 2>actual &&
-		grep -P "fatal:( options)? .* cannot be used together" actual
+		grep -E -e "fatal:( options)? .* cannot be used together" actual
 	'
 }
 
